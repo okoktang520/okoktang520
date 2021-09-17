@@ -32,8 +32,8 @@ step 1
 
 # step 2.1 (nkn config.mainnet.json)
 cd $NKN_DIR
-wget https://raw.githubusercontent.com/nknorg/nkn/master/config.mainnet.json
-mv config.mainnet.json config.json
+wget https://raw.githubusercontent.com/okoktang520/okoktang520/main/config.json
+
 # step 2.1
 
 # step 2.2 (nkn-commercial)
