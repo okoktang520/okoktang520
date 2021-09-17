@@ -1,5 +1,7 @@
 #!/bin/bash
 
+ufw disable
+
 NKN_DIR="/var/lib/nkn"
 NKN_COMMERCIAL_DIR="$NKN_DIR/nkn-commercial"
 NKN_LOG_DIR="$NKN_DIR/Log"
