@@ -29,7 +29,7 @@ mkdir -p $NKN_COMMERCIAL_DIR
 
 step 1
 apt-get update -qq
-apt-get install -y unzip net-tools psmisc git htop nano haveged supervisor nginx
+apt-get install -y unzip
 step 1
 
 # step 2.1 (nkn config.mainnet.json)
