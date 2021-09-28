@@ -9,25 +9,10 @@ echo -e "=======================================================================
 echo
 echo "Updating your OS..."
 echo "---------------------------"
-export DEBIAN_FRONTEND=noninteractive
-apt-get -qq update
-apt-get -qq upgrade -y
-apt-get install make curl git unzip whois -y --allow-downgrades --allow-remove-essential --allow-change-held-packages
-apt-get install ufw -y --allow-downgrades --allow-remove-essential --allow-change-held-packages
-apt-get install make curl git ufw unzip whois -y --allow-downgrades --allow-remove-essential --allow-change-held-packages
+apt-get update -y
+apt-get install make curl git unzip whois -y
 # Setup UFW Firewall
-ufw allow 30000
-ufw allow 30001
-ufw allow 30002
-ufw allow 30003
-ufw allow 30004
-ufw allow 30005
-ufw allow 22
-ufw allow 80
-ufw allow 443
-ufw --force enable
-echo -e "=> Updating complete
-"
+ufw disable
 ## Install Go
 echo "Installing go..."
 echo "---------------------------"
