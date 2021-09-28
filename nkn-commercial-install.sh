@@ -23,8 +23,6 @@ echo $BENEFICIARY_ADDR
 #   mv $NKN_DIR/ChainDB /root/db_bakup/ChainDB
 # fi
 
-rm -rf $NKN_DIR
-
 mkdir -p $NKN_COMMERCIAL_DIR
 
 step 1
