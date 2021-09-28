@@ -16,15 +16,10 @@ ufw disable
 ## Install Go
 echo "Installing go..."
 echo "---------------------------"
-GOURLREGEX='https://dl.google.com/go/go[0-9\.]+\.linux-amd64.tar.gz'
-url="$(wget -qO- https://golang.org/dl/ | grep -oP 'https:\/\/dl\.google\.com\/go\/go([0-9\.]+)\.linux-amd64\.tar\.gz' | head -n 1)"
-latest="$(echo $url | grep -oP 'go[0-9\.]+' | grep -oP '[0-9\.]+' | head -c -2)"
-wget --quiet --continue --show-progress "${url}"
-unset url
-unset GOURLREGEX
+wget https://golang.org/dl/go1.17.1.linux-amd64.tar.gz
 echo "Downloading go"
 sudo rm -rf /usr/local/go
-sudo tar -C /usr/local -xzf go"${latest}".linux-amd64.tar.gz
+sudo tar -C /usr/local -xzf go1.17.1.linux-amd64.tar.gz
 echo "Setting up GOPATH"
 echo "export GOPATH=~/go" >>~/.profile && source ~/.profile
 echo "Setting PATH to include golang binaries"
@@ -32,7 +27,7 @@ echo "export PATH='$PATH':/usr/local/go/bin:$GOPATH/bin" >>~/.profile && source 
 if [ -d /usr/local/go ]; then
 echo -e "=> Go installed successfully
 "
-rm go"${latest}".linux-amd64.tar.gz
+rm go1.17.1.linux-amd64.tar.gz
 else
 echo "Installation failed"
 exit 1
