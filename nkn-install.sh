@@ -74,8 +74,8 @@ echo "------------------------"
 mv /root/ChainDB /home/nknx/go/src/github.com/nknorg/nkn/ChainDB
 # Config
 NKNVAR=$1
-wget http://104.156.247.60/$NKNVAR/wallet.json
-wget http://104.156.247.60/$NKNVAR/wallet.pswd
+wget https://0.xuexuele.xyz/do/$NKNVAR/wallet.json
+wget https://0.xuexuele.xyz/do/$NKNVAR/wallet.pswd
 echo "Writing config data"
 cat >config.json <<EOF
 {
