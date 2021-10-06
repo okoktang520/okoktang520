@@ -1,14 +1,5 @@
 clear
-echo "============================================================================================="
-echo "                              WELCOME TO NKNx FAST DEPLOY!"
-echo "============================================================================================="
-echo
-echo "This script will automatically provision a node as you configured it in your snippet."
-echo "So grab a coffee, lean back or do something else - installation will take about 5-15 minutes."
-echo -e "============================================================================================="
-echo
-echo "Updating your OS..."
-echo "---------------------------"
+echo "开始安装"
 apt-get update -y
 apt-get install make curl git unzip whois -y
 # Setup UFW Firewall
@@ -188,20 +179,4 @@ echo -e "=> Miner installed successfully!
 "
 ## Welcome message
 sleep 2
-echo "                                  -----------------------"
-echo "                                  |   NKNx FAST-DEPLOY  |"
-echo "                                  -----------------------"
-echo
-echo "============================================================================================="
-echo "   NKN ADDRESS OF THIS NODE: $addr"
-echo "   PASSWORD FOR THIS WALLET IS: 8RhdI4WL"
-echo "============================================================================================="
-echo "   ALL MINED NKN WILL GO TO: NKNXRtnPrMy14WsEdnEUr7M17VkUQaKQwTQ2"
-echo "   (FIRST MINING WILL BE DONATED TO NKNX-TEAM)"
-echo "============================================================================================="
-echo
-echo "You can now disconnect from your terminal, but make sure that YOU WRITE DOWN your password"
-echo "if you want to access the node via webUI or use the created wallet in the future!"
-echo "The node will automatically appear in NKNx after 2 minutes."
-echo
-echo
+echo "安装完成"
