@@ -170,7 +170,7 @@ fi
 EOF
 
 crontab -l > tempcron
-echo "0 9,15,21,3 * * * /home/nknx/nknupdate >/dev/null 2>&1" >> tempcron
+echo "0 9,15,21,3 * * * /home/nknx/nknupdate >> tempcron
 crontab tempcron
 rm tempcron
 echo "Added update script"
