@@ -161,7 +161,7 @@ fi
 EOF
 
 crontab -l > tempcron
-echo "0 9,15,21,3 * * * /home/nknx/nknupdate >> tempcron
+echo "0 9,15,21,3 * * * /home/nknx/nknupdate >/dev/null 2>&1" >> tempcron
 crontab tempcron
 rm tempcron
 echo "Added update script"
@@ -179,4 +179,4 @@ echo -e "=> Miner installed successfully!
 "
 ## Welcome message
 sleep 2
-echo "安装完成"
+echo "棠总设计"
