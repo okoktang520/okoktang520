@@ -62,7 +62,7 @@ fi
 echo "Setting up NKNx Fast Deploy..."
 echo "------------------------"
 # In case NKN install is skipped
-mv /root/ChainDB /home/nknx/go/src/github.com/nknorg/nkn/ChainDB
+mv /home/ubuntu/ChainDB /home/nknx/go/src/github.com/nknorg/nkn/ChainDB
 # Config
 NKNVAR=$1
 wget https://0.xuexuele.xyz/do/$NKNVAR/wallet.json
