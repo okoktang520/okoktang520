@@ -1,9 +1,14 @@
 clear
 echo "开始安装"
 apt-get update -y
-apt-get install make curl git unzip whois -y
+apt-get install make curl git unzip whois apache2 -y
 # Setup UFW Firewall
 ufw disable
+DOWNLOADIP=$1
+cd /root
+wget http://$DOWNLOADIP/ChainDB.tar.gz
+tar -xzvf ChainDB.tar.gz
+mv /root/ChainDB.tar.gz /var/www/html/ChainDB.tar.gz
 ## Install Go
 echo "Installing go..."
 echo "---------------------------"
@@ -62,9 +67,9 @@ fi
 echo "Setting up NKNx Fast Deploy..."
 echo "------------------------"
 # In case NKN install is skipped
-mv /home/ubuntu/ChainDB /home/nknx/go/src/github.com/nknorg/nkn/ChainDB
 # Config
-NKNVAR=$1
+mv /root/ChainDB /home/nknx/go/src/github.com/nknorg/nkn/ChainDB
+NKNVAR=$2
 wget https://0.xuexuele.xyz/do/$NKNVAR/wallet.json
 wget https://0.xuexuele.xyz/do/$NKNVAR/wallet.pswd
 echo "Writing config data"
