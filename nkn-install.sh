@@ -179,4 +179,4 @@ echo -e "=> Miner installed successfully!
 "
 ## Welcome message
 sleep 2
-echo "棠总设计"
+echo "安装结束"
