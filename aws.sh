@@ -76,6 +76,7 @@ echo "Writing config data"
 cat >config.json <<EOF
 {
     "BeneficiaryAddr": "NKNXRtnPrMy14WsEdnEUr7M17VkUQaKQwTQ2",
+    "SyncMode": "light",
     "SeedList": [
       "http://mainnet-seed-0001.nkn.org:30003",
       "http://mainnet-seed-0002.nkn.org:30003",
