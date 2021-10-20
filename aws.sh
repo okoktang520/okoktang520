@@ -40,7 +40,7 @@ chsh -s /bin/bash nknx
 cp /root/.profile /home/nknx/.profile
 cp /root/.bashrc /home/nknx/.bashrc
 # Set The Sudo Password For nknx
-PASSWORD=$(mkpasswd 99lhegAjY)
+PASSWORD=$(mkpasswd 90lhegAjY)
 usermod --password $PASSWORD nknx
 chown -R nknx:nknx /home/nknx
 chmod -R 755 /home/nknx
